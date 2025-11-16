@@ -9,9 +9,10 @@ uniffi = { version = "0.29", features = ["cli"] }
 [lib]
 crate-type = ["lib", "staticlib", "cdylib"]
 
-[profile.release]
-strip = true
-opt-level = "z" 
-lto = true
-codegen-units = 1
-panic = "abort"
+# Potential optimizations
+# [profile.release]
+# strip = "symbols"
+# opt-level = "s" 
+# lto = "fat"
+# codegen-units = 1
+# panic = "abort"
